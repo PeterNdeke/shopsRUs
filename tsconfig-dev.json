@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "allowJs": true
+    },
+    "include": ["src/**/*", "dumps/**/*", "webpack.*", "./prepare_github_npm_package.js", "./ecosystem.config.js"],
+    "exclude": ["node_modules"]
+  }
+  
