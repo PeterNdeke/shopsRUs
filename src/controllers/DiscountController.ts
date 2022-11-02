@@ -27,7 +27,7 @@ export class DiscountController extends BaseController {
     super();
   }
   @httpGet("/")
-  async getAllCustomers(
+  async getAllDiscount(
     @queryParam("def__Get_All_Discount") def: string,
     @queryParam("page") page: number,
     @queryParam("limit") limit: number,

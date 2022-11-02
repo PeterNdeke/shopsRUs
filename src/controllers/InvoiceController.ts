@@ -24,7 +24,7 @@ export class InvoiceController extends BaseController {
     super();
   }
   @httpGet("/")
-  async getAllCustomers(
+  async getAllInvoices(
     @queryParam("def__Get_All_Invoice") def: string,
     @queryParam("page") page: number,
     @queryParam("limit") limit: number,
@@ -66,7 +66,7 @@ export class InvoiceController extends BaseController {
   }
 
   @httpPost("/")
-  async createDiscount(
+  async createInvoice(
     @queryParam("def__Create_Invoice") def: string,
     req: Request,
     res: Response

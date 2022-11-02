@@ -185,6 +185,7 @@ export class InvoiceService {
         break;
     }
   }
+
   async getInvoiceById(id: string) {
     return await this.invoiceRepository.getById(id);
   }
@@ -194,6 +195,7 @@ export class InvoiceService {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
     return num.toString().padStart(6, "0");
   }
+
   async getInvoices({
     page,
     size,
