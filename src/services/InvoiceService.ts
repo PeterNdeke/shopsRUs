@@ -61,6 +61,7 @@ export class InvoiceService {
     let totalDiscountAmount: number = 0;
     let totalAmountPaid: number = 0;
     let discountPercent: number = 0;
+
     switch (customer?.customer_type) {
       case CUSTOMER_TYPE.AFFILIATE:
         const affiliateDiscount01 =
@@ -87,8 +88,7 @@ export class InvoiceService {
 
           const discountAmountApplied = multipleOf100s * disCountAmount;
           totalDiscountAmount += discountAmountApplied;
-          const AmountPaid = totalInvoiceAmount - discountAmountApplied;
-          totalAmountPaid += AmountPaid;
+          totalAmountPaid = totalInvoiceAmount - totalDiscountAmount;
         }
         //update invoice with this details
         const updateData = {
@@ -125,8 +125,7 @@ export class InvoiceService {
 
           const discountAmountApplied = multipleOf100s * disCountAmount;
           totalDiscountAmount += discountAmountApplied;
-          const AmountPaid = totalInvoiceAmount - discountAmountApplied;
-          totalAmountPaid += AmountPaid;
+          totalAmountPaid = totalInvoiceAmount - totalDiscountAmount;
         }
         //update invoice with this details
         const updateData01 = {
@@ -170,8 +169,7 @@ export class InvoiceService {
 
           const discountAmountApplied = multipleOf100s * disCountAmount;
           totalDiscountAmount += discountAmountApplied;
-          const AmountPaid = totalInvoiceAmount - discountAmountApplied;
-          totalAmountPaid += AmountPaid;
+          totalAmountPaid = totalInvoiceAmount - totalDiscountAmount;
         }
         //update invoice with this details
         const updateData02 = {
