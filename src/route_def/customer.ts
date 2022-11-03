@@ -5,6 +5,7 @@ export default {
       customer_email: "",
       customer_phone: "",
       country: "",
+      customer_type: "",
     },
     response: {
       id: "",
@@ -13,6 +14,7 @@ export default {
       customer_phone: "",
       country: "",
       status: "",
+      customer_type: "",
       updatedAt: "",
       createdAt: "",
     },
